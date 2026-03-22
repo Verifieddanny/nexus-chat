@@ -10,6 +10,7 @@ import SidebarHeader from './sidebar/SidebarHeader';
 import SearchBar from './sidebar/SearchBar';
 import RoomList from './sidebar/RoomList';
 import CreateGroupOverlay from './sidebar/CreateGroupOverlay';
+import { DemoUser } from '../constant/demoUsers';
 
 export const Sidebar: React.FC = () => {
   const { user, logout } = useAuthStore();
@@ -80,6 +81,9 @@ export const Sidebar: React.FC = () => {
   const handleCreateGroup = async (e: React.SubmitEvent) => {
     e.preventDefault();
 
+    if (DemoUser.some(userId => userId === user?._id)) {
+      return;
+    }
     let finalDisplayPic = '';
     if (imageFile) {
       finalDisplayPic = await uploadToCDN(imageFile, previewUrl, setIsUploading);

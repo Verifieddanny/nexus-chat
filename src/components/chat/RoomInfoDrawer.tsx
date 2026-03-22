@@ -157,6 +157,7 @@ const RoomInfoDrawer: React.FC<RoomInfoDrawerProps> = ({
                         type="text"
                         placeholder="Search by username..."
                         value={memberSearch}
+                        disabled={DemoUser.some(userId => userId === user?._id)}
                         onChange={(e) => searchMembers(e.target.value)}
                       />
                     </div>

@@ -24,10 +24,10 @@ export const uploadToCDN = async (
       uploadData,
     );
 
-    console.log("✅ CDN Upload Success:", response.data.secure_url);
+    console.log("CDN Upload Success:", response.data.secure_url);
     return response.data.secure_url;
   } catch (err: any) {
-    console.error("❌ CDN Upload Failed:", err);
+    console.error("CDN Upload Failed:", err);
     throw new Error(
       "Image upload failed. Check your Cloudinary configuration.",
     );
