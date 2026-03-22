@@ -2,7 +2,7 @@
 
 A full-featured real-time chat application built with React, TypeScript, Zustand, and Socket.io. Supports private DMs and group chats with real-time messaging, typing indicators, read receipts, presence detection, QR code group invites, and demo accounts for instant testing.
 
-**Live:** [https://nexus-chat-fe.vercel.app](https://nexus-chat-fe.vercel.app)
+**Live:** [https://nexus-chat-ruby.vercel.app/](https://nexus-chat-ruby.vercel.app/)
 
 **Backend Repo:** [https://github.com/Verifieddanny/chat-app-BE](https://github.com/Verifieddanny/chat-app-BE)
 
