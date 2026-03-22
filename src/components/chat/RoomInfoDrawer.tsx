@@ -198,6 +198,7 @@ const RoomInfoDrawer: React.FC<RoomInfoDrawerProps> = ({
                 </div>
 
                 <button
+                disabled={typeof currentRoom.creator === "string" ? currentRoom.creator === user?._id : currentRoom.creator._id === user?._id}
                   onClick={handleLeaveGroup}
                   style={{ width: '100%', marginTop: '2rem', padding: '0.75rem', borderRadius: '8px', background: '#dc262622', color: '#ef4444', border: '1px solid #ef4444', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
                 >
